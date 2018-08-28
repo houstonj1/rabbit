@@ -22,6 +22,7 @@ channel = connection.channel()
 
 channel.queue_declare(queue='task_hello', durable=True)
 
+channel.basic_qos(prefetch_count=1)
 channel.basic_consume(callback, queue='hello')
 print("  [*] Waiting for messages. To exit press CTRL-C")
 channel.start_consuming()
