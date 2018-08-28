@@ -6,8 +6,8 @@ Created to follow the tutorials found here - [RabbitMQ Tutorials](https://www.ra
 
 ## Exercises
 <pre>
-Hello World!
-Work Queues
+Hello World! [#################] - Done
+Work Queues [##################] - Done
 Publish/Subscribe
 Routing
 Topics
