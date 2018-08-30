@@ -8,7 +8,7 @@ Created to follow the tutorials found here - [RabbitMQ Tutorials](https://www.ra
 <pre>
 Hello World! [#################] - Done
 Work Queues [##################] - Done
-Publish/Subscribe
+Publish/Subscribe [############] - Done
 Routing
 Topics
 RPC
