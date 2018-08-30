@@ -6,6 +6,9 @@ receive_logs.py
 Receives messages from the logs exchange
 """
 
+def callback(ch, method, properties, body):
+    print("  [x] {0}".format(body))
+
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
@@ -17,3 +20,6 @@ queue_name = result.method.queue
 channel.queue_bind(exchange='logs', queue=result.method.queue)
 
 print("  [*] Waiting for logs. To exit press CTRL-C")
+
+channel.basic_consume(callback, queue=queue_name, no_ack=True)
+channel.start_consuming()
